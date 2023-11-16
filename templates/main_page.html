@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charseet="UFT-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Obelisk </title>
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body> 
+    <main>
+        <div id= "post"> 
+            <h1>Bienvenido</h1>
+            <section id = "make_post">
+                <h2> Escribe tu post </h2>
+                <form action="/postear" method="post">
+                    <label for="titulo">Titulo</label>
+                    <input type="text" name="titulo" id="titulo">
+                    <textarea name="contenido" id="contenido" cols="30" rows="10"></textarea>
+                    <input type="submit" value="Postear">
+                </form>
+        </div>
+        <div id="ver_post">
+            <h1> Publicaciones </h1>
+            <section id="publicaciones">
+                <ul>
+                    {% for publicacion in publicaciones %}
+                        <li>
+                            <strong>Título:</strong> {{ publicacion.titulo }}<br>
+                            <strong>Contenido:</strong> {{ publicacion.contenido }}<br>
+                            <strong>Correo del usuario:</strong> {{ publicacion.correo  }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </section>
+            <section id = "hacer_comentario">
+                <h3> haz un comentario </h3>
+                <form action = "/hacer_comentario" method = "post">
+                    <textarea name = "contenido_comentario" id="contenido_comentario" cols = "10"rows='3' ></textarea>
+                    <input type = "sumbmit" value = "comentar">
+                </form> 
+            <section id = "comentarios">
+                <ul>
+                    {% for comentario in comentarios %}
+                    <li>
+                        <strong>
+                    </li>
+                </ul>
+            </section>
+            <table></table>
+        </div>
+        
+    </main>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charseet="UFT-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Obelisk </title>
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1> Obelisk </h1>
+        <nav>
+            <li><a href="#Iniciar_Sesion"> Iniciar Sesion </a></li>
+            <li><a href="#Registrate"> Registrate</a></li>
+            <li><a href="#Nosotros"> Nosotros </a></li>
+            <li><a href="#Servicios"> Servicios </a></li>
+        </nav>
+    </header>
+    <div id="registro">
+        <h1> Registro</h1>
+        <section id="Registrate">
+            <h2> Crea una cuenta </h2>
+            <form action="/procesar_registro" method = "post">
+                <label for = "nombre">Nombre: </label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                <label for = "correo">Correo: </label>
+                <input type="email" name="correo" id="correo" placeholder="Correo" required>
+                <label for = "contraseña">Contraseña: </label> 
+                <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" required>
+                
+                <input type="submit" value="Crear Cuenta">
+
+            </form>
+
+        </section>
+    </div>
+    <div id="Iniciar_Sesion">
+        <h1> Iniciar Sesion </h1>   
+        <section id = "Iniciar_Sesion">
+            <h2> Inicia Sesion </h2>
+            <form action = "/procesar_login" method = "post">
+                <label for = "correo">Correo: </label>
+                <input type="email" name="correo" id="correo" placeholder="Correo" required>
+                <label for = "contraseiaa">Contraseña: </label> 
+                <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" required>
+                
+                <input type="submit" value="Iniciar Sesion">
+        </section>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
